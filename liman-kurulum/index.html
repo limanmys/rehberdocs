@@ -228,8 +228,7 @@ sudo apt update
 <pre><code class="language-bash">echo &quot;deb [arch=amd64] http://depo.aciklab.org/ onyedi main&quot; | sudo tee /etc/apt/sources.list.d/acikdepo.list
 </code></pre>
 <p>Depoyu ekledikten sonra kullanabilmek için AcikLab deposu için public.key'i sisteminize güvenilir şekilde eklemeniz gerekmektedir. Aşağıdaki komut ile açık anahtarı sisteminize ekleyebilirsiniz:</p>
-<pre><code class="language-bash">
-sudo apt install gnupg2 -y
+<pre><code class="language-bash">sudo apt install gnupg2 -y
 sudo wget -qO - http://depo.aciklab.org/public.key | sudo apt-key add -
 </code></pre>
 <h2 id="3-guncel-liman-depo-uzerinden-yuklemek">3. Güncel Liman'ı depo üzerinden yüklemek</h2>

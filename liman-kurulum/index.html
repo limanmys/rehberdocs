@@ -211,14 +211,14 @@ sudo apt install php-sqlite3 php-curl
 <h4 id="121-ubuntu-ve-debian">1.2.1. Ubuntu ve Debian</h4>
 <p>Ubuntu resmi depolarında PostgreSQL güncel 13.x paketleri olmadığı için aşağıdaki depo eklenmesi gerekmektedir:</p>
 <pre><code class="language-bash">sudo sh -c 'echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list'
-sudo apt install gnupg2 -y
+sudo apt install gnupg2 ca-certificates -y
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update
 </code></pre>
 <h4 id="122-pardus-19x">1.2.2. Pardus 19.x</h4>
 <p>Pardus resmi depolarında PostgreSQL güncel 13.x paketleri olmadığı için aşağıdaki depo eklenmesi gerekmektedir:</p>
 <pre><code class="language-bash">sudo sh -c 'echo &quot;deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list'
-sudo apt install gnupg2 -y
+sudo apt install gnupg2 ca-certificates -y
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update
 </code></pre>
@@ -228,7 +228,7 @@ sudo apt update
 <pre><code class="language-bash">echo &quot;deb [arch=amd64] http://depo.aciklab.org/ onyedi main&quot; | sudo tee /etc/apt/sources.list.d/acikdepo.list
 </code></pre>
 <p>Depoyu ekledikten sonra kullanabilmek için AcikLab deposu için public.key'i sisteminize güvenilir şekilde eklemeniz gerekmektedir. Aşağıdaki komut ile açık anahtarı sisteminize ekleyebilirsiniz:</p>
-<pre><code class="language-bash">sudo apt install gnupg2 -y
+<pre><code class="language-bash">sudo apt install gnupg2 ca-certificates -y
 sudo wget -qO - http://depo.aciklab.org/public.key | sudo apt-key add -
 </code></pre>
 <h2 id="3-guncel-liman-depo-uzerinden-yuklemek">3. Güncel Liman'ı depo üzerinden yüklemek</h2>
